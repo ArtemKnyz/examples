@@ -1,12 +1,15 @@
+import java.util.logging.Logger;
+
 public class UntrustworthyMailWorker implements MailService {
     RealMailService realMailService;
 
-    Spy spy;
-    Thief thief;
-    UntrustworthyMailWorker untrustworthyMailWorker;
-    Inspector inspector;
+    private Logger loger = null;
+    Spy spy = null;
+    Thief thief = new Thief(100);
+    //UntrustworthyMailWorker untrustworthyMailWorker;
+    Inspector inspector = new Inspector();
 
-    MailService [] ms;
+    MailService [] ms = {spy, inspector, thief};
 
 
     public UntrustworthyMailWorker(MailService[] mailServices) {
