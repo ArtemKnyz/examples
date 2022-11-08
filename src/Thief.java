@@ -9,16 +9,10 @@ public class Thief implements MailService{
     int getStolenValue(){
         return stolenPrice;
     }
+
+
     @Override
     public Sendable processMail(Sendable mail) {
-        if(mail instanceof Package){
-
-            return null;
-        }
-        return mail;
+        return null;
     }
-
-
-
-
 }

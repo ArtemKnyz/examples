@@ -1,10 +1,12 @@
 public class MailPackage extends AbstractSendable{
     private final Package content;
 
-    public MailPackage(String from, String to, Package content) {
+    public MailPackage(String from, String to, Package con) {
         super(from, to);
-        this.content = content;
+        content=con;
+
     }
+
 
     public Package getContent() {
         return content;

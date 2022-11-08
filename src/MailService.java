@@ -1,3 +1,3 @@
-public interface MailService {
+interface MailService {
     Sendable processMail(Sendable mail);
 }

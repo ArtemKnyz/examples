@@ -5,6 +5,8 @@ import java.util.logging.*;
 public class Main {
 
 
+
+
     //org.stepic.java.logging.ClassA
     private static final Logger LOGGERA = Logger.getLogger(Main.class.getName());
 
@@ -19,7 +21,7 @@ public class Main {
             fh.setFormatter(new SimpleFormatter());
             fh.setLevel(Level.WARNING);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            //throw new RuntimeException(e);
         }
     }
     public static final String AUSTIN_POWERS = "Austin Powers";

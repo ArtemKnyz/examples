@@ -1,4 +1,5 @@
-public interface Sendable {
+interface Sendable {
     String getFrom();
+
     String getTo();
 }
