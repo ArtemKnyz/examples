@@ -7,39 +7,6 @@ public class Main {
     public static final String BANNED_SUBSTANCE = "banned substance";
 
     public static void main(String[] args) {
-        Logger logger = Logger.getLogger(Main.class.getName());
-
-        Inspector inspector = new Inspector();
-        Spy spy = new Spy(logger);
-        Thief thief = new Thief(100);
-        MailService variousWorkers[] = {spy, thief, inspector};
-        UntrustworthyMailWorker worker = new UntrustworthyMailWorker(variousWorkers);
-
-        Sendable correspondence[] = {
-                new MailMessage("Oxxxymiron", "Гнойный", "Я здесь чисто по фану, поглумиться над слабым\n" +
-                        "Ты же вылез из мамы под мой дисс на Бабана...."),
-                new MailMessage("Гнойный", "Oxxxymiron", "....Что? Так болел за Россию, что на нервах терял ганглии.\n" +
-                        "Но когда тут проходили митинги, где ты сидел? В Англии!...."),
-                new MailMessage("Жриновский", AUSTIN_POWERS, "Бери пацанов, и несите меня к воде."),
-                new MailMessage(AUSTIN_POWERS, "Пацаны", "Го, потаскаем Вольфовича как Клеопатру"),
-                new MailPackage("берег", "море", new Package("ВВЖ", 32)),
-                new MailMessage("NASA", AUSTIN_POWERS, "Найди в России ракетные двигатели и лунные stones"),
-                new MailPackage(AUSTIN_POWERS, "NASA", new Package("рпакетный двигатель ", 2500000)),
-                new MailPackage("AUSTIN", "NASA", new Package("new sto", 100500)),
-                new MailPackage("Китай", "КНДР", new Package("banned substance", 113)),
-                new MailPackage(AUSTIN_POWERS, "ИГИЛ (запрещенная группировка", new Package("tiny bomb", 92)),
-                new MailPackage("Иран", "Террорист", new Package("weap to somebody", 100)),
-                new MailPackage("Pit", "Тom", new Package("sun for all", 101)),
-                new MailMessage("defog", "Психиатр", "something really good"),
-        };
-
-        for (Sendable as : correspondence) {
-            try {
-                worker.processMail(as);
-            } catch (Exception e) {
-                logger.log(Level.WARNING, "Inspector found somthing interesting");
-            }
-        }
 
     }
 
